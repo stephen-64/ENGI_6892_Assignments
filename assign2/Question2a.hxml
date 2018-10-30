@@ -1,0 +1,6 @@
+# Haxe makefile used to run Question2a requires the Assertion library
+# running the command "haxe Question2a.hxml" with Question2a.hx in the same 
+# directroy will allow the results of running the code to be displayed
+-m Question2a.hx
+-lib Assertion
+--interp
