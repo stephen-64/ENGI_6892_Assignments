@@ -1,0 +1,6 @@
+# Haxe makefile used to make Question1b.py
+# running the command "haxe Question1bpy.hxml" with Question1b.hx in the same 
+# directroy will generate a python file based on Question1b.py
+# which can then be tested with test_predicateParser.py
+-m Question1b.hx
+-python Question1b.py

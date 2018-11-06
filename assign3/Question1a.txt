@@ -1,0 +1,52 @@
+id -> ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+num -> ['0','1','2','3','4','5','6','7','8','9']
+op -> ['-','+','*','/']
+relop -> ['=','<','>','<=',">="]
+predop -> ['AND','OR','IMP']
+quant -> ['FORALL','EXISTS']
+check_rb -> ')'
+check_lb -> '('
+check_srb -> ']'
+check_slb -> '['
+check_col -> '::'
+run_parser -> comp id
+run_parser -> opercomp b
+run_parser -> b
+run_parser -> logic compar
+run_parser -> sb
+run_parser -> loops compar
+run_parser -> opercomp operat
+run_parser -> operb compoper
+run_parser -> b compoper
+run_parser -> operat bcomp
+bcomp -> relop id
+operb -> b op
+compoper -> comp operat
+compoper -> relop operat
+logic -> compar predop
+compar -> comp id
+compar -> comp num
+opercomp -> operat relop
+operat -> oper id
+operat -> oper num
+oper -> id op
+comp -> id relop
+logiccb -> logic comparb
+logiccb -> logic opcomp
+comparb -> compar b
+b -> ob check_lb
+b -> ob cb
+sb -> sob scb
+sob -> logic check_slb
+sob -> loops check_slb
+loops -> loop check_col
+loop -> quant id
+scb -> logiccb check_srb
+scb -> loopar check_srb
+loopar -> loops compar
+opcomp -> oper comparant
+comparant -> comp num
+ob -> oper check_lb
+ob -> comp check_lb
+ob -> op check_lb
+cb -> operat check_rb

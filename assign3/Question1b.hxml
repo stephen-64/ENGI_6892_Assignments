@@ -1,0 +1,5 @@
+# Haxe makefile used to run Question1b 
+# running the command "haxe Question1b.hxml" with Question1b.hx in the same 
+# directroy will allow the results of running the code to be displayed
+-m Question1b.hx
+--interp
